@@ -8,10 +8,16 @@ import Profile from "./pages/Profile";
 import Account from "./pages/Account";
 import Config from "./pages/Configuration";
 import PasswordReset from "./pages/PasswordReset";
+import { Helmet } from "react-helmet";
 
 function App() {
   return (
     <div className="App">
+      <Helmet>
+        <title>Gi Plus</title>
+        <meta name="description" content="App Description" />
+        <meta name="theme-color" content="#008f68" />
+      </Helmet>
       <Routes>
         <Route path="sign-in" element={<SignIn />} />
         <Route path="sign-up" element={<SignUp />} />
