@@ -8,7 +8,6 @@ import {
   styled,
 } from "@mui/material";
 import { Helmet } from "react-helmet-async";
-import Logo from "src/components/LogoSign";
 
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -34,7 +33,6 @@ function StatusMaintenance() {
       </Helmet>
       <MainContent>
         <Container maxWidth="md">
-          <Logo />
           <Box textAlign="center">
             <Container maxWidth="xs">
               <Typography variant="h2" sx={{ mt: 4, mb: 2 }}>
