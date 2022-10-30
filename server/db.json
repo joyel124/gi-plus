@@ -1,18 +1,23 @@
 {
-    "users":[
-        {
-            "id": 1,
-            "email": "example1@hotmail.com",
-            "password": "123567",
-            "firstname": "joyel",
-            "lastname": "cutipa"
-        },
-        {
-            "id": 2,
-            "email": "example2@hotmail.com",
-            "password": "1235672",
-            "firstname": "carlos",
-            "lastname": "perez"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "example1@hotmail.com",
+      "password": "123567",
+      "firstname": "joyel",
+      "lastname": "cutipa"
+    },
+    {
+      "id": 2,
+      "email": "example2@hotmail.com",
+      "password": "1235672",
+      "firstname": "carlos",
+      "lastname": "perez"
+    },
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$e9lUDOsPZvWUt6MpZkc6autgaFp1DuI0kM60q32qsM7vcRYweNngW",
+      "id": 3
+    }
+  ]
 }
