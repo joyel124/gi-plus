@@ -15,7 +15,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthProvider";
 import { useRef, useState, useEffect, useContext } from "react";
-
 import axios from "../../api/axios";
 const LOGIN_URL = "/sign-in";
 
@@ -175,13 +174,13 @@ export default function SignIn() {
                 >
                   Sign In
                 </Button>
-                <Grid container>
+                <Grid container justifyContent="center">
                   <Grid item xs>
                     <Link href="password-reset" variant="body2" target="_blank">
                       Forgot password?
                     </Link>
                   </Grid>
-                  <Grid item>
+                  <Grid item xs>
                     <Link href="/sign-up" variant="body2">
                       {"Don't have an account? Sign Up"}
                     </Link>
