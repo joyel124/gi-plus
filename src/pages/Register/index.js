@@ -127,7 +127,10 @@ export default function SignUp() {
         REGISTER_URL,
         JSON.stringify({ firstname, lastname, email, password }),
         {
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
           withCredentials: true,
         }
       );
