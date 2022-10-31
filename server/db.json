@@ -18,6 +18,20 @@
       "email": "olivier@mail.com",
       "password": "$2a$10$e9lUDOsPZvWUt6MpZkc6autgaFp1DuI0kM60q32qsM7vcRYweNngW",
       "id": 3
+    },
+    {
+      "email": "example124@hotmail.com",
+      "password": "$2a$10$g00UV5NrnkwtHFNqwbuOTuNrjb1XfX27/nshH7nEKtHiCZ/771pgy",
+      "firstname": "joel",
+      "lastname": "cutipa",
+      "id": 4
+    },
+    {
+      "email": "dasdasdas@example.com",
+      "password": "$2a$10$HxPnA6dlkogWfIee.IHa9OBK..HkFLZ/RG2GOEJyoE4cghyz/LsgO",
+      "firstname": "sadsad",
+      "lastname": "dasdasd",
+      "id": 5
     }
   ]
 }
