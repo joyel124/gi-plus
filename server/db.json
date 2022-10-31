@@ -32,6 +32,13 @@
       "firstname": "sadsad",
       "lastname": "dasdasd",
       "id": 5
+    },
+    {
+      "email": "olivier@mail.pe",
+      "password": "$2a$10$zzSiJuTk8rEgbiiX1jQHWO1sYC7kZ3zIbNorABbwkS8rwYoEWmuoO",
+      "firstname": "ssss",
+      "lastname": "ssss",
+      "id": 6
     }
   ]
 }

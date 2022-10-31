@@ -81,7 +81,6 @@ export default function SignIn() {
       //setAuth({ email, password, accessToken });
       setEmail("");
       setPwd("");
-      history("/home");
       setSuccess(true);
     } catch (err) {
       console.log(err);
