@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthProvider";
 import { useRef, useState, useEffect, useContext } from "react";
 import axios from "../../api/axios";
-const LOGIN_URL = "/sign-in";
+const LOGIN_URL = "/signin";
 
 function Copyright(props) {
   return (
