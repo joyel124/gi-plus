@@ -65,5 +65,6 @@
     "json-server-auth": "^2.1.0",
     "postcss": "^8.4.17",
     "tailwindcss": "^3.1.8"
-  }
+  },
+  "proxy": "https://fake-api-eight.vercel.app"
 }
