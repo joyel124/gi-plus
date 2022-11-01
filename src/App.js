@@ -12,6 +12,8 @@ import StatusMaintenance from "./pages/Maintenance";
 import Status404 from "./pages/Error404";
 import Status500 from "./pages/Error500";
 import StatusComingSoon from "./pages/ComingSoon";
+import TableCrudV2 from "./components/TableCrudV2";
+import ClientList from "./pages/Lists/Client";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <meta name="theme-color" content="#008f68" />
       </Helmet>
       <Routes>
+        <Route path="client-list" element={<ClientList />} />
+        <Route path="table-crud-v2" element={<TableCrudV2 />} />
         <Route path="sign-in" element={<SignIn />} />
         <Route path="error-404" element={<Status404 />} />
         <Route path="error-500" element={<Status500 />} />
