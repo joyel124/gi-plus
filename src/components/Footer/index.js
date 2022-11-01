@@ -6,7 +6,32 @@ import Link from "@mui/material/Link";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
+    /*<Typography
+      variant="h6"
+      noWrap
+      component="a"
+      sx={{
+        display: { xs: "none", md: "flex" },
+        fontFamily: "monospace",
+        fontWeight: 400,
+        letterSpacing: "0rem",
+        color: "inherit",
+        textDecoration: "none",
+      }}
+    >
+      {"Copyright © "}
+      <Link color="inherit" href="https://gi-plus.joyel.me/">
+        Gi-Plus
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>*/
+    <Typography
+      fontSize={15}
+      color="white"
+      fontWeight={700}
+      fontFamily="monospace"
+    >
       {"Copyright © "}
       <Link color="inherit" href="https://gi-plus.joyel.me/">
         Gi-Plus
@@ -34,10 +59,11 @@ export default function StickyFooter() {
           py: 3,
           px: 2,
           mt: "auto",
-          backgroundColor: (theme) =>
-            theme.palette.mode === "dark"
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
+          backgroundColor: "#1976d2",
+          /*backgroundColor: (theme) =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[300]
+              : theme.palette.blue[800],*/
         }}
       >
         <Container maxWidth="sm">
