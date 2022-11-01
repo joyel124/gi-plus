@@ -71,7 +71,7 @@ export default function SignIn() {
         {
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://fake-api-eight.vercel.app",
           },
           withCredentials: true,
         }
