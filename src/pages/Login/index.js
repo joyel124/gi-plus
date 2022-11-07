@@ -11,11 +11,13 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Paper from "@mui/material/Paper";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../../context/AuthProvider";
 import { useRef, useState, useEffect, useContext } from "react";
 import axios from "../../api/axios";
+import Design from "../../components/Design";
 const LOGIN_URL = "/signin";
 
 function Copyright(props) {
@@ -100,7 +102,7 @@ export default function SignIn() {
   };
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
         {success ? (
           <section>
@@ -112,89 +114,123 @@ export default function SignIn() {
           </section>
         ) : (
           <>
-            <Box
+            <Grid
+              item
+              xs={false}
+              sm={4}
+              md={7}
               sx={{
-                marginTop: 8,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                backgroundImage:
+                  "url(https://www.elindependiente.com/wp-content/uploads/2017/07/blockchain-p.gif)",
+                backgroundRepeat: "no-repeat",
+                backgroundColor: (t) =>
+                  t.palette.mode === "light"
+                    ? t.palette.grey[50]
+                    : t.palette.grey[900],
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
+            />
+            <Grid
+              item
+              xs={12}
+              sm={8}
+              md={5}
+              component={Paper}
+              elevation={6}
+              square
             >
-              <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
-                <LockOutlinedIcon />
-              </Avatar>
-              <p
-                ref={errRef}
-                className={errMsg ? "errmsg" : "offscreen"}
-                aria-live="assertive"
-              >
-                {errMsg}
-              </p>
-              <Typography component="h1" variant="h5">
-                Sign in
-              </Typography>
               <Box
-                component="form"
-                onSubmit={handleSubmit}
-                noValidate
-                sx={{ mt: 1 }}
+                sx={{
+                  my: 8,
+                  mx: 4,
+                  marginTop: 8,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
               >
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="email"
-                  ref={emailRef}
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  autoFocus
-                  value={email}
-                  type="text"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <TextField
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  onChange={(e) => setPwd(e.target.value)}
-                  value={password}
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
-                />
-                <FormControlLabel
-                  control={<Checkbox value="remember" color="primary" />}
-                  label="Remember me"
-                />
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
+                <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+                  <LockOutlinedIcon />
+                </Avatar>
+                <p
+                  ref={errRef}
+                  className={errMsg ? "errmsg" : "offscreen"}
+                  aria-live="assertive"
                 >
-                  Sign In
-                </Button>
-                <Grid container justifyContent="center">
-                  <Grid item xs>
-                    <Link href="password-reset" variant="body2" target="_blank">
-                      Forgot password?
-                    </Link>
+                  {errMsg}
+                </p>
+                <Design />
+                <Typography component="h1" variant="h5">
+                  Sign in
+                </Typography>
+                <Box
+                  component="form"
+                  onSubmit={handleSubmit}
+                  noValidate
+                  sx={{ mt: 1 }}
+                >
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    ref={emailRef}
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
+                    value={email}
+                    type="text"
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    onChange={(e) => setPwd(e.target.value)}
+                    value={password}
+                    type="password"
+                    id="password"
+                    autoComplete="current-password"
+                  />
+                  <FormControlLabel
+                    control={<Checkbox value="remember" color="primary" />}
+                    label="Remember me"
+                  />
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2 }}
+                  >
+                    Sign In
+                  </Button>
+                  <Grid container justifyContent="center">
+                    <Grid item xs>
+                      <Link
+                        href="password-reset"
+                        variant="body2"
+                        target="_blank"
+                      >
+                        Forgot password?
+                      </Link>
+                    </Grid>
+                    <Grid item xs>
+                      <Link href="/sign-up" variant="body2">
+                        {"Don't have an account? Sign Up"}
+                      </Link>
+                    </Grid>
                   </Grid>
-                  <Grid item xs>
-                    <Link href="/sign-up" variant="body2">
-                      {"Don't have an account? Sign Up"}
-                    </Link>
-                  </Grid>
-                </Grid>
+                </Box>
               </Box>
-            </Box>
-            <Copyright sx={{ mt: 8, mb: 4 }} />
+              <Copyright sx={{ mt: 8, mb: 4 }} />
+            </Grid>
           </>
         )}
-      </Container>
+      </Grid>
     </ThemeProvider>
   );
 }

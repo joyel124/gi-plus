@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <>
       <Header></Header>
-      <h1 className="">THIS IS HOME</h1>
       <Grid container spacing={0} columns={{ xs: 8, sm: 16 }} minHeight={1000}>
         <Grid xs={8} display="flex" justifyContent="center" alignItems="center">
           <IconMenuA />
