@@ -1,6 +1,6 @@
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
-import TableCrudV2 from "../../../components/TableCrudV2";
+import TableCrud from "../../../components/TableCrud/Client";
 import { Grid } from "@mui/material";
 
 export default function ClientList() {
@@ -15,7 +15,7 @@ export default function ClientList() {
           alignItems="center"
           padding={20}
         >
-          <TableCrudV2 />
+          <TableCrud />
         </Grid>
       </Grid>
       <Footer></Footer>

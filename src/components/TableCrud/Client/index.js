@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../TableCrud/TableCrud.css";
+import "../../TableCrud/TableCrud.css";
 import { forwardRef } from "react";
-import Avatar from "react-avatar";
 import Grid from "@mui/material/Grid";
 
 import MaterialTable from "material-table";
@@ -61,21 +60,17 @@ function validateEmail(email) {
 function TableCrud() {
   const defaultMaterialTheme = createTheme();
   var columns = [
-    { title: "id", field: "id", hidden: true },
-    {
-      title: "Avatar",
-      render: (rowData) => (
-        <Avatar
-          maxInitials={1}
-          size={40}
-          round={true}
-          name={rowData === undefined ? " " : rowData.first_name}
-        />
-      ),
-    },
+    { title: "id", field: "id", hidden: false },
+    { title: "Document Type", field: "document_type" },
+    { title: "N° identification", field: "n_identification" },
     { title: "First name", field: "first_name" },
     { title: "Last name", field: "last_name" },
-    { title: "email", field: "email" },
+    { title: "Number Phone", field: "number_phone" },
+    { title: "Email", field: "email" },
+    { title: "Address", field: "address" },
+    { title: "User Type", field: "user_type" },
+    { title: "Username", field: "user_name" },
+    { title: "Password", field: "password" },
   ];
   const [data, setData] = useState([]); //table data
 
@@ -188,8 +183,7 @@ function TableCrud() {
   return (
     <div className="TableCrud">
       <Grid container spacing={1}>
-        <Grid item xs={3}></Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <div>
             {iserror && (
               <Alert severity="error">
@@ -201,7 +195,7 @@ function TableCrud() {
           </div>
           <ThemeProvider theme={defaultMaterialTheme}>
             <MaterialTable
-              title="User data from remote source"
+              title="Client List"
               columns={columns}
               data={data}
               icons={tableIcons}
@@ -222,7 +216,6 @@ function TableCrud() {
             />
           </ThemeProvider>
         </Grid>
-        <Grid item xs={3}></Grid>
       </Grid>
     </div>
   );

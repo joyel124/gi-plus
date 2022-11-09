@@ -120,8 +120,7 @@ export default function SignIn() {
               sm={4}
               md={7}
               sx={{
-                backgroundImage:
-                  "url(https://www.elindependiente.com/wp-content/uploads/2017/07/blockchain-p.gif)",
+                backgroundImage: "url(https://random.imagecdn.app/1200/1000)",
                 backgroundRepeat: "no-repeat",
                 backgroundColor: (t) =>
                   t.palette.mode === "light"

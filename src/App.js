@@ -2,7 +2,7 @@ import "./App.css";
 import SignIn from "./pages/Login";
 import { Routes, Route, Navigate } from "react-router-dom";
 import SignUp from "./pages/Register";
-import TableCrud from "./components/TableCrud";
+import TableCrud from "./components/TableCrud/Client";
 import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Config from "./pages/Configuration";
