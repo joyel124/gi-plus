@@ -14,7 +14,7 @@ export default function Design() {
           2000,
           "The best app",
           2000,
-          "to manage your business",
+          "to manage your company",
           2000,
         ]}
         loop={Infinity}
