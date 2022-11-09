@@ -1,5 +1,7 @@
 .TableCrud {
     text-align: center;
+    overflow-x: auto;
+    
   }
   
   .App-logo {

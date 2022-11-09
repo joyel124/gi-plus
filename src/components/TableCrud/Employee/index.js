@@ -75,6 +75,8 @@ function TableCrud() {
     { title: "Username", field: "user_name" },
     { title: "Password", field: "password" },
     { title: "Vinculation Date", field: "vinculation_date" },
+    { title: "Job Position", field: "job_position" },
+    { title: "Dependency", field: "dependency" },
   ];
   const [data, setData] = useState([]); //table data
 
@@ -199,7 +201,7 @@ function TableCrud() {
           </div>
           <ThemeProvider theme={defaultMaterialTheme}>
             <MaterialTable
-              title="Client List"
+              title="Employee List"
               columns={columns}
               data={data}
               icons={tableIcons}

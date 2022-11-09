@@ -14,6 +14,8 @@ import Status500 from "./pages/Error500";
 import StatusComingSoon from "./pages/ComingSoon";
 import TableCrudV2 from "./components/TableCrudV2";
 import ClientList from "./pages/Lists/Client";
+import SupplierList from "./pages/Lists/Supplier";
+import EmployeeList from "./pages/Lists/Employee";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <meta name="theme-color" content="#008f68" />
       </Helmet>
       <Routes>
+        <Route path="supplier-list" element={<SupplierList />} />
+        <Route path="employee-list" element={<EmployeeList />} />
         <Route path="client-list" element={<ClientList />} />
         <Route path="table-crud-v2" element={<TableCrudV2 />} />
         <Route path="sign-in" element={<SignIn />} />
