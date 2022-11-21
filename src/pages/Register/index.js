@@ -25,7 +25,7 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const EMAIL_REGEX =
   /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = "/signup";
+const REGISTER_URL = "api/v1/users/sign-up";
 
 function Copyright(props) {
   return (
@@ -131,7 +131,7 @@ export default function SignUp() {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
           },
-          withCredentials: true,
+          baseURL: "https://localhost:7130",
         }
       );
       // TODO: remove console.logs before deployment

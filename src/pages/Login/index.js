@@ -18,7 +18,7 @@ import AuthContext from "../../context/AuthProvider";
 import { useRef, useState, useEffect, useContext } from "react";
 import axios from "../../api/axios";
 import Design from "../../components/Design";
-const LOGIN_URL = "/signin";
+const LOGIN_URL = "api/v1/users/sign-in";
 
 function Copyright(props) {
   return (
@@ -73,9 +73,9 @@ export default function SignIn() {
         {
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://fake-api-eight.vercel.app",
+            "Access-Control-Allow-Origin": "https://localhost:7130",
           },
-          withCredentials: true,
+          baseURL: "https://localhost:7130",
         }
       );
       console.log(JSON.stringify(response?.data));
