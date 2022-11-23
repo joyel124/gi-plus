@@ -20,32 +20,27 @@ export default function IconMenuA() {
     >
       <MenuList>
         <MenuItem disabled={true}>
-          <ListItemText>Solicitudes</ListItemText>
+          <ListItemText>Sales</ListItemText>
         </MenuItem>
         <Divider />
-        <Link href="/state-list" underline="none" color="inherit">
-          <MenuItem>
-            <ListItemText>State list</ListItemText>
-          </MenuItem>
-        </Link>
-        <Link href="/state-list" underline="none" color="inherit">
-          <MenuItem>
-            <ListItemText>Create states</ListItemText>
-          </MenuItem>
-        </Link>
         <Link href="/request-list" underline="none" color="inherit">
           <MenuItem>
-            <ListItemText>List type of request</ListItemText>
+            <ListItemText>Request List</ListItemText>
           </MenuItem>
         </Link>
-        <Link href="/request-list" underline="none" color="inherit">
+        <Link href="/product-list" underline="none" color="inherit">
           <MenuItem>
-            <ListItemText>Create request type</ListItemText>
+            <ListItemText>Product List</ListItemText>
           </MenuItem>
         </Link>
-        <Link href="/request-list" underline="none" color="inherit">
+        <Link href="/sale-list" underline="none" color="inherit">
           <MenuItem>
-            <ListItemText>Create request</ListItemText>
+            <ListItemText>Sale List</ListItemText>
+          </MenuItem>
+        </Link>
+        <Link href="/make-sale" underline="none" color="inherit">
+          <MenuItem disabled={true}>
+            <ListItemText>Make Sale (In process)</ListItemText>
           </MenuItem>
         </Link>
       </MenuList>

@@ -16,6 +16,9 @@ import TableCrudV2 from "./components/TableCrudV2";
 import ClientList from "./pages/Lists/Client";
 import SupplierList from "./pages/Lists/Supplier";
 import EmployeeList from "./pages/Lists/Employee";
+import RequestList from "./pages/Lists/Request";
+import SaleList from "./pages/Lists/Sale";
+import ProductList from "./pages/Lists/Product";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         <meta name="theme-color" content="#008f68" />
       </Helmet>
       <Routes>
+        <Route path="request-list" element={<RequestList />} />
+        <Route path="sale-list" element={<SaleList />} />
+        <Route path="product-list" element={<ProductList />} />
         <Route path="supplier-list" element={<SupplierList />} />
         <Route path="employee-list" element={<EmployeeList />} />
         <Route path="client-list" element={<ClientList />} />

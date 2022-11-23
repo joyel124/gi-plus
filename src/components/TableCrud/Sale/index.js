@@ -61,14 +61,10 @@ function TableCrud() {
   const defaultMaterialTheme = createTheme();
   var columns = [
     { title: "id", field: "id", hidden: true },
-    { title: "Document Type", field: "document_type" },
-    { title: "N° identification", field: "n_identification" },
-    { title: "First name", field: "first_name" },
-    { title: "Last name", field: "last_name" },
-    { title: "Phone", field: "phone" },
-    { title: "Email", field: "email" },
-    { title: "City", field: "city" },
-    { title: "Address", field: "address" },
+    { title: "ClientId", field: "client_id" },
+    { title: "Sale Detail", field: "sale_detail" },
+    { title: "Date", field: "date" },
+    { title: "Payment Voucher", field: "payment_voucher" },
   ];
   const [data, setData] = useState([]); //table data
 
@@ -193,7 +189,7 @@ function TableCrud() {
           </div>
           <ThemeProvider theme={defaultMaterialTheme}>
             <MaterialTable
-              title="Client List"
+              title="Sale List"
               columns={columns}
               data={data}
               icons={tableIcons}

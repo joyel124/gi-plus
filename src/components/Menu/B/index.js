@@ -14,7 +14,7 @@ export default function IconMenuB() {
     <Paper sx={{ width: 320, maxWidth: "100%", backgroundColor: primary }}>
       <MenuList>
         <MenuItem disabled={true}>
-          <ListItemText>Terceros</ListItemText>
+          <ListItemText>Management</ListItemText>
         </MenuItem>
         <Divider />
         <Link href="/client-list" underline="none" color="inherit">
@@ -22,29 +22,14 @@ export default function IconMenuB() {
             <ListItemText>Client List</ListItemText>
           </MenuItem>
         </Link>
-        <Link href="/client-list" underline="none" color="inherit">
-          <MenuItem>
-            <ListItemText>Create Client</ListItemText>
-          </MenuItem>
-        </Link>
         <Link href="/employee-list" underline="none" color="inherit">
           <MenuItem>
             <ListItemText>Employee list</ListItemText>
           </MenuItem>
         </Link>
-        <Link href="/employee-list" underline="none" color="inherit">
-          <MenuItem>
-            <ListItemText>Create employee</ListItemText>
-          </MenuItem>
-        </Link>
         <Link href="/supplier-list" underline="none" color="inherit">
           <MenuItem>
             <ListItemText>Supplier list</ListItemText>
-          </MenuItem>
-        </Link>
-        <Link href="/supplier-list" underline="none" color="inherit">
-          <MenuItem>
-            <ListItemText>Create supllier</ListItemText>
           </MenuItem>
         </Link>
       </MenuList>

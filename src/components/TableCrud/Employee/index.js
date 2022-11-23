@@ -66,17 +66,10 @@ function TableCrud() {
     { title: "First name", field: "first_name" },
     { title: "Last name", field: "last_name" },
     { title: "Phone", field: "phone" },
-    { title: "Cellphone", field: "cellphone" },
     { title: "Email", field: "email" },
     { title: "City", field: "city" },
-    { title: "Distric", field: "distric" },
     { title: "Address", field: "address" },
-    { title: "User Type", field: "user_type" },
-    { title: "Username", field: "user_name" },
-    { title: "Password", field: "password" },
-    { title: "Vinculation Date", field: "vinculation_date" },
     { title: "Job Position", field: "job_position" },
-    { title: "Dependency", field: "dependency" },
   ];
   const [data, setData] = useState([]); //table data
 
