@@ -61,8 +61,6 @@ function TableCrud() {
   const defaultMaterialTheme = createTheme();
   var columns = [
     { title: "id", field: "id", hidden: true },
-    { title: "Document Type", field: "document_type" },
-    { title: "N° identification", field: "n_identification" },
     { title: "Name", field: "name" },
     { title: "Phone", field: "phone" },
     { title: "Email", field: "email" },

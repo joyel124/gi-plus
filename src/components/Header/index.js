@@ -16,7 +16,6 @@ const settings = [
   ["Profile", "/profile"],
   ["Account", "/account"],
   ["Configuration", "/configuration"],
-  ["Logout", "/sign-in"],
 ];
 
 const ResponsiveAppBar = () => {
@@ -28,6 +27,11 @@ const ResponsiveAppBar = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    console.log("delete user in localstorage");
   };
 
   return (
@@ -101,6 +105,11 @@ const ResponsiveAppBar = () => {
                   </Typography>
                 </MenuItem>
               ))}
+              <MenuItem onClick={handleLogout}>
+                <Typography textAlign="center">
+                  <Link to="/sign-in">Logout</Link>
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>

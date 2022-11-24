@@ -78,7 +78,7 @@ function TableCrud() {
 
   useEffect(() => {
     api
-      .get("/users")
+      .get("/clients")
       .then((res) => {
         setData(res.data.data);
       })

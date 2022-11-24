@@ -58,13 +58,14 @@ function validateEmail(email) {
 }
 
 function TableCrud() {
+  var user=JSON.parse(localStorage.getItem('user'));
   const defaultMaterialTheme = createTheme();
   var columns = [
     { title: "id", field: "id", hidden: true },
-    { title: "ClientId", field: "client_id" },
-    { title: "Sale Detail", field: "sale_detail" },
+    { title: "ClientId", field: "clientId" },
+    { title: "Sale Detail", field: "saleDetails" },
     { title: "Date", field: "date" },
-    { title: "Payment Voucher", field: "payment_voucher" },
+    { title: "Payment Voucher", field: "paymentVoucher" },
   ];
   const [data, setData] = useState([]); //table data
 

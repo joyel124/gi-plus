@@ -78,6 +78,10 @@ export default function SignIn() {
           baseURL: "https://localhost:7130",
         }
       );
+      if (response.data.token) {
+        localStorage.setItem("user", JSON.stringify(response.data));
+        console.log(this.user);
+      }
       console.log(JSON.stringify(response?.data));
       //console.log(JSON.stringify(response));
       //const accessToken = response?.data?.accessToken;
