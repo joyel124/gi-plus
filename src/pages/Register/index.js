@@ -131,7 +131,7 @@ export default function SignUp() {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
           },
-          baseURL: "https://localhost:7130",
+          baseURL: "https://gi-plus.azurewebsites.net",
         }
       );
       // TODO: remove console.logs before deployment

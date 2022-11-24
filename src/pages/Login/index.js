@@ -73,15 +73,11 @@ export default function SignIn() {
         {
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://localhost:7130",
+            "Access-Control-Allow-Origin": "https://gi-plus.azurewebsites.net",
           },
-          baseURL: "https://localhost:7130",
+          baseURL: "https://gi-plus.azurewebsites.net",
         }
       );
-      if (response.data.token) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-        console.log(this.user);
-      }
       console.log(JSON.stringify(response?.data));
       //console.log(JSON.stringify(response));
       //const accessToken = response?.data?.accessToken;
