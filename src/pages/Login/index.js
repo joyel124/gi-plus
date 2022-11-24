@@ -120,7 +120,8 @@ export default function SignIn() {
               sm={4}
               md={7}
               sx={{
-                backgroundImage: "url(https://random.imagecdn.app/1200/1000)",
+                backgroundImage:
+                  "url(https://img.freepik.com/fotos-premium/hombre-negocios-usando-dispositivos-tecnologia-e-iconos-interfaz-linea-delgada_117023-904.jpg?w=2000)",
                 backgroundRepeat: "no-repeat",
                 backgroundColor: (t) =>
                   t.palette.mode === "light"
